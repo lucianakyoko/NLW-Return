@@ -8,33 +8,76 @@
   font-size: 62.5%;
 
   --primary-brand-color: hsl(170, 100%, 26%);
+  --primary-brand-beige-color: hsl(39, 100%, 97%);
   --primary-brand-light-color: hsl(148, 23%, 89%);
   --primary-brand-light2-color: hsl(180, 14%, 97%);
   --secondary-headline-color: hsl(105, 100%, 5%);
   --secondary-paragraph-color: hsl(104, 16%, 24%);
   --secondary-white-color: hsl(0, 0%, 100%);
+
+  --nav-height: 7.2rem;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
 
 body {
   font-family: 'DM Sans', sans-serif;
   font-size: 1.6rem;
   text-align: center;
+
+  overflow: overlay;
 }
+
+ul {
+  list-style: none;
+}
+
+.wrapper {
+  width: 37.5rem;
+  margin-inline: auto;
+  padding-inline: 2.4rem;
+}
+
+/* ========== HEADER ========== */
 
 header {
-  width: 37.5rem;
-  margin: auto;
-  margin-top: 4.1rem;
+  margin-top: calc(4.1rem + var(--nav-height));
 }
 
+header::before {
+  content: "";
+  width: 100%;
+  height: calc(108rem + var(--nav-height));
+  background-color: var(--primary-brand-light-color);
+  display: block;
 
-h4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+header img {
+  width: 26.4rem;
+  display: block;
+  margin-inline: auto;
+
+  object-position: 0 2rem;
+}
+
+header h4 {
   color: var(--primary-brand-color);
   font-size: 1.4rem;
+  text-transform: uppercase;
+
   margin-bottom: 1.6rem;
 }
 
-h1 {
+header h1 {
   color: var(--secondary-color);
   font-size: 3.4rem;
   line-height: 130%;
@@ -42,7 +85,7 @@ h1 {
   margin-bottom: 2.4rem;
 }
 
-p {
+header p {
   color: var(--secondary-paragraph-color);
   font-size: 1.8rem;
   font-weight: 400;
@@ -51,7 +94,7 @@ p {
   margin-bottom: 3.2rem;
 }
 
-button {
+header button {
   height: 5.2rem;
   width: 26.3rem;
   margin: auto;
@@ -71,3 +114,170 @@ button {
   justify-content: center;
   gap: 1.6rem;
 }  
+
+.stats {
+  width: 32.7rem;
+  margin-inline: auto;
+  padding: 4rem 0;
+
+  background-color: var(--primary-brand-beige-color);
+  border: 1px solid var(--primary-brand-light-color);
+  border-radius: .6rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6rem;
+}
+
+.stat h3 {
+  color: var(--secondary-headline-color);
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 130%;
+
+  margin-bottom: 0.4rem;
+}
+
+.stat p {
+  color: var(--primary-brand-color);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 150%;
+
+  margin: 0;
+}
+
+/* ========== NAVIGATION ========== */
+nav {
+  height: var(--nav-height);
+  padding: 1.6rem 2.4rem;
+  
+  display: flex;
+
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav.scroll {
+  width: 100vw;
+  background-color: var(--primary-brand-color);
+  transition: all 0.4s ease-in-out;
+}
+
+
+nav.scroll svg:nth-child(1) path {
+  fill: var(--secondary-white-color);
+}
+
+nav.scroll button path {
+  stroke: var(--secondary-white-color);
+}
+
+nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ========== MENU EXPENDED ========== */
+body.menu-expended {
+  overflow: hidden;
+}
+
+body.menu-expended > :not(nav) {
+  display: none;
+}
+
+.menu,
+.close-menu,
+body.menu-expended .open-menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.menu-expended .menu,
+body.menu-expended .close-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+body.menu-expended .menu {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--primary-brand-color);
+
+  padding-top: var(--nav-height);
+}
+
+body.menu-expended nav {
+  position: relative;
+}
+
+.menu ul:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+
+  margin-top: 6rem;
+
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 3.1rem;
+}
+
+.menu ul li a{
+  color: var(--primary-brand-beige-color);
+  text-decoration: none;
+}
+
+.menu .button {
+  background-color: var(--secondary-white-color);
+  border-radius: 4rem;
+
+  color: var(--primary-brand-color);
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.3rem;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  display: inline-block;
+  padding: 16px 32px;
+  margin-top: 4.8rem;
+  margin-bottom: 8rem;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem; 
+}
+
+body.menu-expended .logo,
+body.menu-expended button {
+  position: relative;
+  z-index: 2;
+}
+
+
+body.menu-expended .logo path {
+  fill: var(--secondary-white-color);
+}
+
+body.menu-expended button path {
+  stroke: var(--secondary-white-color);
+}
