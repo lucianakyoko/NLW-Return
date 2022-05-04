@@ -1,22 +1,31 @@
 function onScroll() {
-  const nav = document.querySelector('#navigation');
- 
-  if(scrollY > 24) {
-    nav.classList.add('scroll')
+  if (scrollY >= 100) {
+    navigation.classList.add('scroll')
   } else {
-    nav.classList.remove('scroll')
-  };
+    navigation.classList.remove('scroll')
+  }
 }
 
-
 function openMenu() {
-  const body = document.querySelector('body');
-
-  body.classList.add('menu-expended');
+  document.body.classList.add('menu-expanded')
 }
 
 function closeMenu() {
-  const body = document.querySelector('body');
-
-  body.classList.remove('menu-expended');
+  document.body.classList.remove('menu-expanded')
 }
+
+ScrollReveal({
+  origin: 'top',
+  distance: '30px',
+  duration: 700,
+}).reveal(`
+  #home, 
+  #home img, 
+  #home .stats, 
+  #services,
+  #services header,
+  #services .card
+  #about, 
+  #about header, 
+  #about .content`
+)
