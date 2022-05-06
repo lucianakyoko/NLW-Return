@@ -1,8 +1,8 @@
 # NLW-Return
 
 <p align="center">
-  <a href="#-origem">Origin</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-origem">Impulse
+  <a href="#origem">Origin &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#impulse">Impulse 
 </p>
 
 <p align="center">
@@ -10,10 +10,10 @@
 </p>
 
 
-## Trilha Origin
+##Trilha Origin
 <p align="center">
-  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="https://doctorcare-nlw.netlify.app/">Link
 
 </p>
@@ -26,16 +26,15 @@
 </p>
 
 
-## Tecnologias:
+##Tecnologias
 * HTML
 * CSS
 * JavaScript
 * ScrollReaveal
 * Deploy no Netlify
 
-## Projeto:
+##Projeto:
 Landing page institucional responsiva
 
 ---
 
-## Trilha Impulse
