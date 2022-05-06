@@ -1,14 +1,41 @@
 # NLW-Return
 
-## Trilha Origin
-[ :link: Acessar a página](https://doctorcare-nlw.netlify.app/)
-![Screenshot da página](https://github.com/lucianakyoko/NLW-Return/blob/main/.github/doctorcare.jpg)
+<p align="center">
+  <a href="#-origem">Origin</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-origem">Impulse
+</p>
 
-Techs utilizadas:
+<p align="center">
+  <img alt="NLW Return" src=".github/nlw-return.jpg" width="100%"/>
+</p>
+
+
+## Trilha Origin
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="https://doctorcare-nlw.netlify.app/">Link
+
+</p>
+
+<a href="https://doctorcare-nlw.netlify.app/">:link: Acessar a página </a>
+
+
+<p align="center">
+  <img alt="Screenshot da página" src=".github/doctorcare.jpg" width="100%"/>
+</p>
+
+
+## Tecnologias:
 * HTML
 * CSS
 * JavaScript
 * ScrollReaveal
+* Deploy no Netlify
 
+## Projeto:
+Landing page institucional responsiva
+
+---
 
 ## Trilha Impulse
