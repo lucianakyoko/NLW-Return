@@ -5,10 +5,10 @@ const app = express();
 
 app.use(express.json());
 
-app.post('/feedbacks', (req, res) => {
+app.post('/feedbacks', async(req, res) => {
   const {type, comment, screenshot} = req.body;
 
-  prisma.feedback.create({
+  await prisma.feedback.create({
     data: {
       type,
       comment,
