@@ -8,7 +8,7 @@ app.use(express.json());
 app.post('/feedbacks', async(req, res) => {
   const {type, comment, screenshot} = req.body;
 
-  await prisma.feedback.create({
+  const feedback = await prisma.feedback.create({
     data: {
       type,
       comment,
@@ -16,7 +16,7 @@ app.post('/feedbacks', async(req, res) => {
     }
   })
 
-  return res.send('Hello, World!')
+  return res.status(201).json({data: feedback});
 })
 
 app.listen(3333, () => {
