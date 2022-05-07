@@ -6,11 +6,13 @@ const app = express();
 app.use(express.json());
 
 app.post('/feedbacks', (req, res) => {
+  const {type, comment, screenshot} = req.body;
+
   prisma.feedback.create({
     data: {
-      type: req.body.type,
-      comment: req.body.comment,
-      screenshot: req.body.screnshot,
+      type,
+      comment,
+      screenshot
     }
   })
 
